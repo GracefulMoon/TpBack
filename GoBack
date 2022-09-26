@@ -1,0 +1,17 @@
+local function teleport() 
+if game:GetService("Workspace")["_DATA"].GameFinished.Value == true then
+task.wait(5)
+webhook()
+game:GetService("ReplicatedStorage").endpoints.client_to_server.teleport_back_to_lobby:InvokeServer()
+end
+end
+
+if game.placeID == 8304191830 then
+end
+elseif game.placeID == 8349889591 then
+while true do
+task.wait(10)
+teleport()
+end
+
+
